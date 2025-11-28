@@ -9,7 +9,6 @@ import tn.esprit.studentmanagement.entities.Enrollment;
 import tn.esprit.studentmanagement.repositories.EnrollmentRepository;
 import tn.esprit.studentmanagement.services.EnrollmentService;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,19 +16,18 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class EnrollmentServiceTest {
+class EnrollmentServiceTest {
 
     @Mock
-    private EnrollmentRepository enrollmentRepository;
+    EnrollmentRepository enrollmentRepository;
 
     @InjectMocks
-    private EnrollmentService enrollmentService;
+    EnrollmentService enrollmentService;
 
     @Test
-    public void testGetAllEnrollments() {
-        when(enrollmentRepository.findAll()).thenReturn(
-                Arrays.asList(new Enrollment(), new Enrollment())
-        );
+    void shouldReturnAllEnrollments() {
+        when(enrollmentRepository.findAll())
+                .thenReturn(List.of(new Enrollment(), new Enrollment()));
 
         List<Enrollment> list = enrollmentService.getAllEnrollments();
 
@@ -38,7 +36,7 @@ public class EnrollmentServiceTest {
     }
 
     @Test
-    public void testGetEnrollmentById() {
+    void shouldReturnEnrollmentById() {
         Enrollment e = new Enrollment();
         e.setIdEnrollment(3L);
 
@@ -51,7 +49,7 @@ public class EnrollmentServiceTest {
     }
 
     @Test
-    public void testSaveEnrollment() {
+    void shouldSaveEnrollment() {
         Enrollment e = new Enrollment();
         e.setIdEnrollment(4L);
 
@@ -60,10 +58,11 @@ public class EnrollmentServiceTest {
         Enrollment result = enrollmentService.saveEnrollment(e);
 
         assertEquals(4L, result.getIdEnrollment());
+        verify(enrollmentRepository).save(e);
     }
 
     @Test
-    public void testDeleteEnrollment() {
+    void shouldDeleteEnrollment() {
         enrollmentService.deleteEnrollment(11L);
 
         verify(enrollmentRepository).deleteById(11L);
