@@ -1,0 +1,12 @@
+FROM jenkins/jenkins:lts
+
+USER root
+
+RUN apt-get update && \
+    apt-get install -y maven openjdk-17-jdk && \
+    rm -rf /var/lib/apt/lists/*
+
+RUN mkdir -p /var/jenkins_home/.m2
+COPY settings.xml /var/jenkins_home/.m2/settings.xml
+
+USER jenkins
