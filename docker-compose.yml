@@ -1,11 +1,66 @@
 version: "3.8"
 
 services:
-  student-management:
-    image: student-management:latest
-    container_name: student-management
+
+  jenkins:
+    image: jenkins/jenkins:lts
+    container_name: jenkins
+    user: root
+    ports:
+      - "8085:8080"     # Jenkins Web UI
+      - "50000:50000"   # Jenkins agents
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock  # Allow Jenkins to run Docker
+    environment:
+      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+    networks:
+      - devops-net
+
+  sonarqube:
+    image: sonarqube:latest
+    container_name: sonarqube
+    restart: always
+    ports:
+      - "9000:9000"
+    environment:
+      SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
+    networks:
+      - devops-net
+    volumes:
+      - sonar_data:/opt/sonarqube/data
+      - sonar_logs:/opt/sonarqube/logs
+      - sonar_extensions:/opt/sonarqube/extensions
+
+  nexus:
+    image: sonatype/nexus3:latest
+    container_name: nexus
+    restart: always
+    ports:
+      - "8081:8081"
+    volumes:
+      - nexus_data:/nexus-data
+    networks:
+      - devops-net
+
+  student-app:
+    build: .
+    container_name: student-app
     ports:
       - "8080:8080"
-    environment:
-      - SPRING_PROFILES_ACTIVE=prod
-    restart: always
+    networks:
+      - devops-net
+    depends_on:
+      - nexus
+      - sonarqube
+
+networks:
+  devops-net:
+    driver: bridge
+
+volumes:
+  jenkins_home:
+  sonar_data:
+  sonar_logs:
+  sonar_extensions:
+  nexus_data:
