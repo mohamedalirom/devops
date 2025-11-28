@@ -258,3 +258,759 @@ Caused by: org.hibernate.HibernateException: Unable to determine Dialect without
 2025-11-26 17:10:10 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-11-26 17:10:10 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
 2025-11-26 17:10:10 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 17:44:01 INFO  StudentService - Saving student
+2025-11-26 17:44:01 INFO  StudentService - Student saved with ID 10
+2025-11-26 17:44:01 INFO  StudentService - Deleting student with ID 5
+2025-11-26 17:44:01 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 17:44:01 INFO  StudentService - Fetching all students
+2025-11-26 17:44:01 INFO  StudentService - Returned 2 students
+2025-11-26 17:44:01 INFO  StudentService - Fetching student with ID 1
+2025-11-26 17:44:01 INFO  StudentService - Student found with ID 1
+2025-11-26 17:44:02 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 17:44:02 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 17:44:02 INFO  EnrollmentService - Saving enrollment
+2025-11-26 17:44:02 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 17:44:02 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 17:44:02 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 17:44:02 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 17:44:02 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 17:44:02 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 17:44:02 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 17:44:02 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 8044 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 17:44:02 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 17:44:03 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 17:44:03 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 32 ms. Found 4 JPA repository interfaces.
+2025-11-26 17:44:03 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 17:44:03 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 17:44:03 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 17:44:04 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 17:44:04 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 17:44:04 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 17:44:04 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 17:44:04 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 17:44:04 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 17:44:05 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 17:44:05 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:44:05 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 17:44:05 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 17:44:05 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.56 seconds (process running for 5.699)
+2025-11-26 17:44:06 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 17:44:06 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 17:44:06 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 17:44:06 INFO  DepartmentService - Department found with ID 7
+2025-11-26 17:44:06 INFO  DepartmentService - Fetching all departments
+2025-11-26 17:44:06 INFO  DepartmentService - Returned 2 departments
+2025-11-26 17:44:06 INFO  DepartmentService - Saving department
+2025-11-26 17:44:06 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 17:44:06 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:44:06 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 17:44:06 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 17:47:57 INFO  StudentService - Saving student
+2025-11-26 17:47:57 INFO  StudentService - Student saved with ID 10
+2025-11-26 17:47:57 INFO  StudentService - Deleting student with ID 5
+2025-11-26 17:47:57 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 17:47:57 INFO  StudentService - Fetching all students
+2025-11-26 17:47:57 INFO  StudentService - Returned 2 students
+2025-11-26 17:47:57 INFO  StudentService - Fetching student with ID 1
+2025-11-26 17:47:57 INFO  StudentService - Student found with ID 1
+2025-11-26 17:47:57 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 17:47:57 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 17:47:57 INFO  EnrollmentService - Saving enrollment
+2025-11-26 17:47:57 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 17:47:57 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 17:47:57 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 17:47:57 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 17:47:57 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 17:47:57 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 17:47:58 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 17:47:58 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 8352 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 17:47:58 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 17:47:59 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 17:47:59 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 4 JPA repository interfaces.
+2025-11-26 17:47:59 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 17:47:59 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 17:47:59 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 17:47:59 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 17:47:59 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 17:47:59 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 17:47:59 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 17:47:59 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 17:47:59 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 17:48:01 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 17:48:01 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:48:01 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 17:48:01 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 17:48:01 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.784 seconds (process running for 5.7)
+2025-11-26 17:48:02 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 17:48:02 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 17:48:02 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 17:48:02 INFO  DepartmentService - Department found with ID 7
+2025-11-26 17:48:02 INFO  DepartmentService - Fetching all departments
+2025-11-26 17:48:02 INFO  DepartmentService - Returned 2 departments
+2025-11-26 17:48:02 INFO  DepartmentService - Saving department
+2025-11-26 17:48:02 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 17:48:02 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:48:02 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 17:48:02 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 17:53:00 INFO  StudentService - Saving student
+2025-11-26 17:53:00 INFO  StudentService - Student saved with ID 10
+2025-11-26 17:53:00 INFO  StudentService - Deleting student with ID 5
+2025-11-26 17:53:00 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 17:53:00 INFO  StudentService - Fetching all students
+2025-11-26 17:53:00 INFO  StudentService - Returned 2 students
+2025-11-26 17:53:00 INFO  StudentService - Fetching student with ID 1
+2025-11-26 17:53:00 INFO  StudentService - Student found with ID 1
+2025-11-26 17:53:00 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 17:53:00 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 17:53:00 INFO  EnrollmentService - Saving enrollment
+2025-11-26 17:53:00 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 17:53:00 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 17:53:00 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 17:53:00 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 17:53:00 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 17:53:00 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 17:53:00 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 17:53:00 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 8699 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 17:53:00 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 17:53:01 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 17:53:01 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-11-26 17:53:02 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 17:53:02 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 17:53:02 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 17:53:02 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 17:53:02 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 17:53:02 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 17:53:02 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 17:53:02 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 17:53:02 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 17:53:03 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 17:53:03 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:53:04 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 17:53:04 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 17:53:04 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.916 seconds (process running for 6.066)
+2025-11-26 17:53:04 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 17:53:04 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 17:53:04 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 17:53:04 INFO  DepartmentService - Department found with ID 7
+2025-11-26 17:53:04 INFO  DepartmentService - Fetching all departments
+2025-11-26 17:53:04 INFO  DepartmentService - Returned 2 departments
+2025-11-26 17:53:04 INFO  DepartmentService - Saving department
+2025-11-26 17:53:04 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 17:53:04 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:53:04 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 17:53:04 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 17:56:52 INFO  StudentService - Saving student
+2025-11-26 17:56:52 INFO  StudentService - Student saved with ID 10
+2025-11-26 17:56:52 INFO  StudentService - Deleting student with ID 5
+2025-11-26 17:56:52 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 17:56:52 INFO  StudentService - Fetching all students
+2025-11-26 17:56:52 INFO  StudentService - Returned 2 students
+2025-11-26 17:56:52 INFO  StudentService - Fetching student with ID 1
+2025-11-26 17:56:52 INFO  StudentService - Student found with ID 1
+2025-11-26 17:56:52 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 17:56:52 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 17:56:52 INFO  EnrollmentService - Saving enrollment
+2025-11-26 17:56:52 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 17:56:52 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 17:56:52 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 17:56:52 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 17:56:52 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 17:56:52 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 17:56:52 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 17:56:52 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 8932 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 17:56:52 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 17:56:53 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 17:56:53 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 35 ms. Found 4 JPA repository interfaces.
+2025-11-26 17:56:53 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 17:56:53 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 17:56:53 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 17:56:53 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 17:56:54 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 17:56:54 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 17:56:54 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 17:56:54 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 17:56:54 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 17:56:54 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 17:56:54 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:56:55 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 17:56:55 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 17:56:55 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.094 seconds (process running for 5.204)
+2025-11-26 17:56:55 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 17:56:55 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 17:56:55 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 17:56:55 INFO  DepartmentService - Department found with ID 7
+2025-11-26 17:56:55 INFO  DepartmentService - Fetching all departments
+2025-11-26 17:56:55 INFO  DepartmentService - Returned 2 departments
+2025-11-26 17:56:55 INFO  DepartmentService - Saving department
+2025-11-26 17:56:55 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 17:56:55 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:56:55 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 17:56:55 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 17:58:20 INFO  StudentService - Saving student
+2025-11-26 17:58:20 INFO  StudentService - Student saved with ID 10
+2025-11-26 17:58:20 INFO  StudentService - Deleting student with ID 5
+2025-11-26 17:58:20 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 17:58:20 INFO  StudentService - Fetching all students
+2025-11-26 17:58:20 INFO  StudentService - Returned 2 students
+2025-11-26 17:58:20 INFO  StudentService - Fetching student with ID 1
+2025-11-26 17:58:20 INFO  StudentService - Student found with ID 1
+2025-11-26 17:58:20 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 17:58:20 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 17:58:20 INFO  EnrollmentService - Saving enrollment
+2025-11-26 17:58:20 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 17:58:20 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 17:58:20 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 17:58:20 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 17:58:20 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 17:58:20 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 17:58:20 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 17:58:21 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 9163 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 17:58:21 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 17:58:22 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 17:58:22 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2025-11-26 17:58:22 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 17:58:22 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 17:58:22 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 17:58:22 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 17:58:22 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 17:58:22 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 17:58:22 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 17:58:22 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 17:58:22 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 17:58:23 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 17:58:23 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:58:23 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 17:58:23 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 17:58:24 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.231 seconds (process running for 5.256)
+2025-11-26 17:58:24 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 17:58:24 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 17:58:24 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 17:58:24 INFO  DepartmentService - Department found with ID 7
+2025-11-26 17:58:24 INFO  DepartmentService - Fetching all departments
+2025-11-26 17:58:24 INFO  DepartmentService - Returned 2 departments
+2025-11-26 17:58:24 INFO  DepartmentService - Saving department
+2025-11-26 17:58:24 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 17:58:24 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 17:58:24 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 17:58:24 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 18:05:24 INFO  StudentService - Saving student
+2025-11-26 18:05:24 INFO  StudentService - Student saved with ID 10
+2025-11-26 18:05:24 INFO  StudentService - Deleting student with ID 5
+2025-11-26 18:05:24 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 18:05:24 INFO  StudentService - Fetching all students
+2025-11-26 18:05:24 INFO  StudentService - Returned 2 students
+2025-11-26 18:05:24 INFO  StudentService - Fetching student with ID 1
+2025-11-26 18:05:24 INFO  StudentService - Student found with ID 1
+2025-11-26 18:05:24 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 18:05:24 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 18:05:24 INFO  EnrollmentService - Saving enrollment
+2025-11-26 18:05:24 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 18:05:24 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 18:05:24 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 18:05:24 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 18:05:24 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 18:05:24 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 18:05:24 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 18:05:25 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 9615 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 18:05:25 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 18:05:25 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 18:05:25 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2025-11-26 18:05:26 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 18:05:26 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 18:05:26 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 18:05:26 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 18:05:26 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 18:05:26 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 18:05:26 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 18:05:26 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 18:05:26 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 18:05:27 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 18:05:27 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:05:27 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 18:05:27 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 18:05:27 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 2.902 seconds (process running for 4.87)
+2025-11-26 18:05:28 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 18:05:28 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 18:05:28 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 18:05:28 INFO  DepartmentService - Department found with ID 7
+2025-11-26 18:05:28 INFO  DepartmentService - Fetching all departments
+2025-11-26 18:05:28 INFO  DepartmentService - Returned 2 departments
+2025-11-26 18:05:28 INFO  DepartmentService - Saving department
+2025-11-26 18:05:28 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 18:05:28 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:05:28 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 18:05:28 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 18:07:25 INFO  StudentService - Saving student
+2025-11-26 18:07:25 INFO  StudentService - Student saved with ID 10
+2025-11-26 18:07:25 INFO  StudentService - Deleting student with ID 5
+2025-11-26 18:07:25 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 18:07:25 INFO  StudentService - Fetching all students
+2025-11-26 18:07:25 INFO  StudentService - Returned 2 students
+2025-11-26 18:07:25 INFO  StudentService - Fetching student with ID 1
+2025-11-26 18:07:25 INFO  StudentService - Student found with ID 1
+2025-11-26 18:07:25 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 18:07:25 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 18:07:25 INFO  EnrollmentService - Saving enrollment
+2025-11-26 18:07:25 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 18:07:25 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 18:07:25 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 18:07:25 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 18:07:25 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 18:07:26 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 18:07:26 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 18:07:26 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 9877 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 18:07:26 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 18:07:27 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 18:07:27 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
+2025-11-26 18:07:27 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 18:07:27 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 18:07:27 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 18:07:27 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 18:07:27 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 18:07:27 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 18:07:27 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 18:07:27 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 18:07:27 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 18:07:28 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 18:07:28 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:07:29 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 18:07:29 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 18:07:29 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.49 seconds (process running for 5.612)
+2025-11-26 18:07:29 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 18:07:29 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 18:07:29 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 18:07:29 INFO  DepartmentService - Department found with ID 7
+2025-11-26 18:07:29 INFO  DepartmentService - Fetching all departments
+2025-11-26 18:07:29 INFO  DepartmentService - Returned 2 departments
+2025-11-26 18:07:29 INFO  DepartmentService - Saving department
+2025-11-26 18:07:29 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 18:07:29 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:07:29 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 18:07:29 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 18:09:29 INFO  StudentService - Saving student
+2025-11-26 18:09:29 INFO  StudentService - Student saved with ID 10
+2025-11-26 18:09:29 INFO  StudentService - Deleting student with ID 5
+2025-11-26 18:09:29 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 18:09:29 INFO  StudentService - Fetching all students
+2025-11-26 18:09:29 INFO  StudentService - Returned 2 students
+2025-11-26 18:09:29 INFO  StudentService - Fetching student with ID 1
+2025-11-26 18:09:29 INFO  StudentService - Student found with ID 1
+2025-11-26 18:09:29 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 18:09:29 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 18:09:29 INFO  EnrollmentService - Saving enrollment
+2025-11-26 18:09:29 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 18:09:29 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 18:09:29 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 18:09:29 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 18:09:29 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 18:09:29 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 18:09:30 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 18:09:30 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 10057 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 18:09:30 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 18:09:31 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 18:09:31 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 4 JPA repository interfaces.
+2025-11-26 18:09:31 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 18:09:31 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 18:09:31 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 18:09:31 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 18:09:31 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 18:09:31 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 18:09:31 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 18:09:31 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 18:09:31 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 18:09:32 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 18:09:32 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:09:32 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 18:09:32 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 18:09:33 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.059 seconds (process running for 5.481)
+2025-11-26 18:09:33 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 18:09:33 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 18:09:33 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 18:09:33 INFO  DepartmentService - Department found with ID 7
+2025-11-26 18:09:33 INFO  DepartmentService - Fetching all departments
+2025-11-26 18:09:33 INFO  DepartmentService - Returned 2 departments
+2025-11-26 18:09:33 INFO  DepartmentService - Saving department
+2025-11-26 18:09:33 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 18:09:33 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:09:33 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 18:09:33 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 18:11:56 INFO  StudentService - Saving student
+2025-11-26 18:11:56 INFO  StudentService - Student saved with ID 10
+2025-11-26 18:11:56 INFO  StudentService - Deleting student with ID 5
+2025-11-26 18:11:56 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 18:11:56 INFO  StudentService - Fetching all students
+2025-11-26 18:11:56 INFO  StudentService - Returned 2 students
+2025-11-26 18:11:56 INFO  StudentService - Fetching student with ID 1
+2025-11-26 18:11:56 INFO  StudentService - Student found with ID 1
+2025-11-26 18:11:56 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 18:11:56 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 18:11:56 INFO  EnrollmentService - Saving enrollment
+2025-11-26 18:11:56 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 18:11:56 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 18:11:56 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 18:11:56 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 18:11:56 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 18:11:56 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 18:11:56 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 18:11:57 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 10231 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 18:11:57 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 18:11:57 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 18:11:57 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 4 JPA repository interfaces.
+2025-11-26 18:11:58 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 18:11:58 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 18:11:58 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 18:11:58 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 18:11:58 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 18:11:58 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 18:11:58 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 18:11:58 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 18:11:58 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 18:11:59 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 18:11:59 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:11:59 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 18:11:59 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 18:11:59 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.057 seconds (process running for 5.209)
+2025-11-26 18:12:00 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 18:12:00 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 18:12:00 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 18:12:00 INFO  DepartmentService - Department found with ID 7
+2025-11-26 18:12:00 INFO  DepartmentService - Fetching all departments
+2025-11-26 18:12:00 INFO  DepartmentService - Returned 2 departments
+2025-11-26 18:12:00 INFO  DepartmentService - Saving department
+2025-11-26 18:12:00 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 18:12:00 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:12:00 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 18:12:00 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 18:13:18 INFO  StudentService - Saving student
+2025-11-26 18:13:18 INFO  StudentService - Student saved with ID 10
+2025-11-26 18:13:18 INFO  StudentService - Deleting student with ID 5
+2025-11-26 18:13:18 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 18:13:18 INFO  StudentService - Fetching all students
+2025-11-26 18:13:18 INFO  StudentService - Returned 2 students
+2025-11-26 18:13:18 INFO  StudentService - Fetching student with ID 1
+2025-11-26 18:13:18 INFO  StudentService - Student found with ID 1
+2025-11-26 18:13:18 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 18:13:18 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 18:13:18 INFO  EnrollmentService - Saving enrollment
+2025-11-26 18:13:18 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 18:13:18 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 18:13:18 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 18:13:18 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 18:13:18 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 18:13:18 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 18:13:18 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 18:13:18 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 10478 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 18:13:18 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 18:13:19 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 18:13:19 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
+2025-11-26 18:13:19 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 18:13:19 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 18:13:19 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 18:13:19 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 18:13:19 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 18:13:20 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 18:13:20 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 18:13:20 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 18:13:20 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 18:13:20 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 18:13:20 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:13:21 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 18:13:21 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 18:13:21 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 2.888 seconds (process running for 5.096)
+2025-11-26 18:13:21 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 18:13:21 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 18:13:21 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 18:13:21 INFO  DepartmentService - Department found with ID 7
+2025-11-26 18:13:21 INFO  DepartmentService - Fetching all departments
+2025-11-26 18:13:21 INFO  DepartmentService - Returned 2 departments
+2025-11-26 18:13:21 INFO  DepartmentService - Saving department
+2025-11-26 18:13:21 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 18:13:21 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:13:21 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 18:13:21 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 18:21:23 INFO  StudentService - Saving student
+2025-11-26 18:21:23 INFO  StudentService - Student saved with ID 10
+2025-11-26 18:21:23 INFO  StudentService - Deleting student with ID 5
+2025-11-26 18:21:23 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 18:21:23 INFO  StudentService - Fetching all students
+2025-11-26 18:21:23 INFO  StudentService - Returned 2 students
+2025-11-26 18:21:23 INFO  StudentService - Fetching student with ID 1
+2025-11-26 18:21:23 INFO  StudentService - Student found with ID 1
+2025-11-26 18:21:23 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 18:21:23 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 18:21:23 INFO  EnrollmentService - Saving enrollment
+2025-11-26 18:21:23 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 18:21:23 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 18:21:23 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 18:21:23 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 18:21:23 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 18:21:23 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 18:21:24 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 18:21:24 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 10913 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 18:21:24 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 18:21:25 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 18:21:25 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 4 JPA repository interfaces.
+2025-11-26 18:21:25 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 18:21:25 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 18:21:25 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 18:21:25 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 18:21:25 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 18:21:25 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 18:21:25 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 18:21:25 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 18:21:25 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 18:21:26 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 18:21:26 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:21:26 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 18:21:26 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 18:21:27 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 2.877 seconds (process running for 4.809)
+2025-11-26 18:21:27 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 18:21:27 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 18:21:27 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 18:21:27 INFO  DepartmentService - Department found with ID 7
+2025-11-26 18:21:27 INFO  DepartmentService - Fetching all departments
+2025-11-26 18:21:27 INFO  DepartmentService - Returned 2 departments
+2025-11-26 18:21:27 INFO  DepartmentService - Saving department
+2025-11-26 18:21:27 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 18:21:27 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:21:27 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 18:21:27 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 18:23:33 INFO  StudentService - Saving student
+2025-11-26 18:23:33 INFO  StudentService - Student saved with ID 10
+2025-11-26 18:23:33 INFO  StudentService - Deleting student with ID 5
+2025-11-26 18:23:33 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 18:23:33 INFO  StudentService - Fetching all students
+2025-11-26 18:23:33 INFO  StudentService - Returned 2 students
+2025-11-26 18:23:33 INFO  StudentService - Fetching student with ID 1
+2025-11-26 18:23:33 INFO  StudentService - Student found with ID 1
+2025-11-26 18:23:33 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 18:23:33 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 18:23:33 INFO  EnrollmentService - Saving enrollment
+2025-11-26 18:23:33 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 18:23:33 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 18:23:33 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 18:23:33 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 18:23:33 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 18:23:33 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 18:23:33 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 18:23:33 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 11159 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 18:23:33 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 18:23:34 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 18:23:34 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 42 ms. Found 4 JPA repository interfaces.
+2025-11-26 18:23:35 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 18:23:35 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 18:23:35 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 18:23:35 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 18:23:35 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 18:23:35 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 18:23:35 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 18:23:35 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 18:23:35 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 18:23:36 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 18:23:36 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:23:36 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 18:23:36 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 18:23:36 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 3.107 seconds (process running for 5.515)
+2025-11-26 18:23:36 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 18:23:36 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 18:23:36 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 18:23:36 INFO  DepartmentService - Department found with ID 7
+2025-11-26 18:23:36 INFO  DepartmentService - Fetching all departments
+2025-11-26 18:23:36 INFO  DepartmentService - Returned 2 departments
+2025-11-26 18:23:36 INFO  DepartmentService - Saving department
+2025-11-26 18:23:36 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 18:23:36 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 18:23:36 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 18:23:36 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 20:32:41 INFO  StudentService - Saving student
+2025-11-26 20:32:41 INFO  StudentService - Student saved with ID 10
+2025-11-26 20:32:41 INFO  StudentService - Deleting student with ID 5
+2025-11-26 20:32:41 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 20:32:41 INFO  StudentService - Fetching all students
+2025-11-26 20:32:41 INFO  StudentService - Returned 2 students
+2025-11-26 20:32:41 INFO  StudentService - Fetching student with ID 1
+2025-11-26 20:32:41 INFO  StudentService - Student found with ID 1
+2025-11-26 20:32:42 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 20:32:42 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 20:32:42 INFO  EnrollmentService - Saving enrollment
+2025-11-26 20:32:42 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 20:32:42 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 20:32:42 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 20:32:42 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 20:32:42 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 20:32:42 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 20:32:42 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 20:32:43 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 17090 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 20:32:43 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 20:32:45 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 20:32:45 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 133 ms. Found 4 JPA repository interfaces.
+2025-11-26 20:32:45 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 20:32:46 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 20:32:46 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 20:32:46 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 20:32:46 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 20:32:46 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 20:32:46 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 20:32:46 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 20:32:46 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 20:32:48 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 20:32:48 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 20:32:49 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 20:32:49 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 20:32:50 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 7.072 seconds (process running for 12.763)
+2025-11-26 20:32:50 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 20:32:50 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 20:32:50 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 20:32:50 INFO  DepartmentService - Department found with ID 7
+2025-11-26 20:32:50 INFO  DepartmentService - Fetching all departments
+2025-11-26 20:32:50 INFO  DepartmentService - Returned 2 departments
+2025-11-26 20:32:50 INFO  DepartmentService - Saving department
+2025-11-26 20:32:50 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 20:32:50 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 20:32:50 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 20:32:50 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.
+2025-11-26 20:37:04 INFO  StudentService - Saving student
+2025-11-26 20:37:04 INFO  StudentService - Student saved with ID 10
+2025-11-26 20:37:05 INFO  StudentService - Deleting student with ID 5
+2025-11-26 20:37:05 INFO  StudentService - Student with ID 5 deleted
+2025-11-26 20:37:05 INFO  StudentService - Fetching all students
+2025-11-26 20:37:05 INFO  StudentService - Returned 2 students
+2025-11-26 20:37:05 INFO  StudentService - Fetching student with ID 1
+2025-11-26 20:37:05 INFO  StudentService - Student found with ID 1
+2025-11-26 20:37:05 INFO  EnrollmentService - Fetching all enrollments
+2025-11-26 20:37:05 INFO  EnrollmentService - Returned 2 enrollments
+2025-11-26 20:37:05 INFO  EnrollmentService - Saving enrollment
+2025-11-26 20:37:05 INFO  EnrollmentService - Enrollment saved with ID 4
+2025-11-26 20:37:05 INFO  EnrollmentService - Deleting enrollment with ID 11
+2025-11-26 20:37:05 INFO  EnrollmentService - Enrollment with ID 11 deleted
+2025-11-26 20:37:05 INFO  EnrollmentService - Fetching enrollment with ID 3
+2025-11-26 20:37:05 INFO  EnrollmentService - Enrollment found with ID 3
+2025-11-26 20:37:05 INFO  AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [tn.esprit.studentmanagement.StudentManagementApplicationTests]: StudentManagementApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-11-26 20:37:05 INFO  SpringBootTestContextBootstrapper - Found @SpringBootConfiguration tn.esprit.studentmanagement.StudentManagementApplication for test class tn.esprit.studentmanagement.StudentManagementApplicationTests
+2025-11-26 20:37:06 INFO  StudentManagementApplicationTests - Starting StudentManagementApplicationTests using Java 17.0.17 with PID 17377 (started by yussef in /home/yussef/Desktop/devops/Projet-DevOps/student-management)
+2025-11-26 20:37:06 INFO  StudentManagementApplicationTests - The following 1 profile is active: "test"
+2025-11-26 20:37:07 INFO  RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-11-26 20:37:07 INFO  RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 4 JPA repository interfaces.
+2025-11-26 20:37:08 INFO  LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-11-26 20:37:09 INFO  Version - HHH000412: Hibernate ORM core version 6.6.26.Final
+2025-11-26 20:37:09 INFO  RegionFactoryInitiator - HHH000026: Second-level cache disabled
+2025-11-26 20:37:09 INFO  SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-11-26 20:37:09 INFO  HikariDataSource - HikariPool-1 - Starting...
+2025-11-26 20:37:10 INFO  HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-11-26 20:37:10 INFO  HikariDataSource - HikariPool-1 - Start completed.
+2025-11-26 20:37:10 WARN  deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-11-26 20:37:11 INFO  pooling - HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 2.3.232
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-11-26 20:37:12 INFO  JtaPlatformInitiator - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-11-26 20:37:12 INFO  LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 20:37:13 WARN  JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-11-26 20:37:13 INFO  OptionalValidatorFactoryBean - Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-26 20:37:13 INFO  StudentManagementApplicationTests - Started StudentManagementApplicationTests in 8.015 seconds (process running for 12.47)
+2025-11-26 20:37:14 INFO  DepartmentService - Deleting department with ID 9
+2025-11-26 20:37:14 INFO  DepartmentService - Department with ID 9 deleted
+2025-11-26 20:37:14 INFO  DepartmentService - Fetching department with ID 7
+2025-11-26 20:37:14 INFO  DepartmentService - Department found with ID 7
+2025-11-26 20:37:14 INFO  DepartmentService - Fetching all departments
+2025-11-26 20:37:14 INFO  DepartmentService - Returned 2 departments
+2025-11-26 20:37:14 INFO  DepartmentService - Saving department
+2025-11-26 20:37:14 INFO  DepartmentService - Department saved with ID 2
+2025-11-26 20:37:14 INFO  LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-11-26 20:37:14 INFO  HikariDataSource - HikariPool-1 - Shutdown initiated...
+2025-11-26 20:37:14 INFO  HikariDataSource - HikariPool-1 - Shutdown completed.

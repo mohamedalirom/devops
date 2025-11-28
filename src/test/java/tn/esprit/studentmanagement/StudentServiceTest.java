@@ -9,7 +9,6 @@ import tn.esprit.studentmanagement.entities.Student;
 import tn.esprit.studentmanagement.repositories.StudentRepository;
 import tn.esprit.studentmanagement.services.StudentService;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,28 +16,27 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class StudentServiceTest {
+class StudentServiceTest {
 
     @Mock
-    private StudentRepository studentRepository;
+    StudentRepository studentRepository;
 
     @InjectMocks
-    private StudentService studentService;
+    StudentService studentService;
 
     @Test
-    public void testGetAllStudents() {
-        when(studentRepository.findAll()).thenReturn(
-                Arrays.asList(new Student(), new Student())
-        );
+    void shouldReturnAllStudents() {
+        when(studentRepository.findAll())
+                .thenReturn(List.of(new Student(), new Student()));
 
         List<Student> students = studentService.getAllStudents();
 
         assertEquals(2, students.size());
-        verify(studentRepository, times(1)).findAll();
+        verify(studentRepository).findAll();
     }
 
     @Test
-    public void testGetStudentById() {
+    void shouldReturnStudentById() {
         Student s = new Student();
         s.setIdStudent(1L);
 
@@ -51,7 +49,7 @@ public class StudentServiceTest {
     }
 
     @Test
-    public void testSaveStudent() {
+    void shouldSaveStudent() {
         Student s = new Student();
         s.setIdStudent(10L);
 
@@ -64,7 +62,7 @@ public class StudentServiceTest {
     }
 
     @Test
-    public void testDeleteStudent() {
+    void shouldDeleteStudent() {
         studentService.deleteStudent(5L);
         verify(studentRepository).deleteById(5L);
     }

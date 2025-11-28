@@ -116,5 +116,14 @@
             </plugin>
         </plugins>
     </build>
-
+    <distributionManagement>
+        <repository>
+            <id>nexus</id>
+            <url>http://192.168.214.128:8081/repository/student-management-releases/</url>
+        </repository>
+        <snapshotRepository>
+            <id>nexus</id>
+            <url>http://192.168.214.128:8081/repository/student-management-snapshots/</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>

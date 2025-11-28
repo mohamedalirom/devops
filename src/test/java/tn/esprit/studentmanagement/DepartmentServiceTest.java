@@ -9,7 +9,6 @@ import tn.esprit.studentmanagement.entities.Department;
 import tn.esprit.studentmanagement.repositories.DepartmentRepository;
 import tn.esprit.studentmanagement.services.DepartmentService;
 
-import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
@@ -17,19 +16,18 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-public class DepartmentServiceTest {
+class DepartmentServiceTest {
 
     @Mock
-    private DepartmentRepository departmentRepository;
+    DepartmentRepository departmentRepository;
 
     @InjectMocks
-    private DepartmentService departmentService;
+    DepartmentService departmentService;
 
     @Test
-    public void testGetAllDepartments() {
-        when(departmentRepository.findAll()).thenReturn(
-                Arrays.asList(new Department(), new Department())
-        );
+    void shouldReturnAllDepartments() {
+        when(departmentRepository.findAll())
+                .thenReturn(List.of(new Department(), new Department()));
 
         List<Department> list = departmentService.getAllDepartments();
 
@@ -38,7 +36,7 @@ public class DepartmentServiceTest {
     }
 
     @Test
-    public void testGetDepartmentById() {
+    void shouldReturnDepartmentById() {
         Department d = new Department();
         d.setIdDepartment(7L);
 
@@ -51,7 +49,7 @@ public class DepartmentServiceTest {
     }
 
     @Test
-    public void testSaveDepartment() {
+    void shouldSaveDepartment() {
         Department d = new Department();
         d.setIdDepartment(2L);
 
@@ -60,10 +58,11 @@ public class DepartmentServiceTest {
         Department result = departmentService.saveDepartment(d);
 
         assertEquals(2L, result.getIdDepartment());
+        verify(departmentRepository).save(d);
     }
 
     @Test
-    public void testDeleteDepartment() {
+    void shouldDeleteDepartment() {
         departmentService.deleteDepartment(9L);
 
         verify(departmentRepository).deleteById(9L);
