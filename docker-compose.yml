@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
 
   jenkins:
@@ -7,35 +5,30 @@ services:
     container_name: jenkins
     user: root
     ports:
-      - "8085:8080"     # Jenkins Web UI
-      - "50000:50000"   # Jenkins agents
+      - "8085:8080"
     volumes:
       - jenkins_home:/var/jenkins_home
-      - /var/run/docker.sock:/var/run/docker.sock  # Allow Jenkins to run Docker
-    environment:
-      - JAVA_OPTS=-Djenkins.install.runSetupWizard=false
+      - /var/run/docker.sock:/var/run/docker.sock
     networks:
       - devops-net
 
   sonarqube:
     image: sonarqube:latest
     container_name: sonarqube
-    restart: always
     ports:
       - "9000:9000"
     environment:
       SONAR_ES_BOOTSTRAP_CHECKS_DISABLE: "true"
-    networks:
-      - devops-net
     volumes:
       - sonar_data:/opt/sonarqube/data
       - sonar_logs:/opt/sonarqube/logs
       - sonar_extensions:/opt/sonarqube/extensions
+    networks:
+      - devops-net
 
   nexus:
     image: sonatype/nexus3:latest
     container_name: nexus
-    restart: always
     ports:
       - "8081:8081"
     volumes:
@@ -47,7 +40,7 @@ services:
     build: .
     container_name: student-app
     ports:
-      - "8080:8080"
+      - "8090:8080"
     networks:
       - devops-net
     depends_on:
