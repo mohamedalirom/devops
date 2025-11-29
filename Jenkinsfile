@@ -54,16 +54,9 @@ pipeline {
 
         stage('Deploy to Nexus') {
             steps {
-                withCredentials([usernamePassword(credentialsId: 'nexus-auth', usernameVariable: 'NEXUS_USR', passwordVariable: 'NEXUS_PSW')]) {
-                    sh """
-                        mvn clean deploy -DskipTests \
-                        -Dnexus.user=$NEXUS_USR \
-                        -Dnexus.password=$NEXUS_PSW
-                    """
-                }
+                sh "mvn deploy"
             }
         }
-
 
         stage('Docker Build') {
             steps {
