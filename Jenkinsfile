@@ -15,7 +15,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/mohamedalirom/devops.git'
+                git branch: 'youssefRomdhane', url: 'https://github.com/mohamedalirom/devops.git'
             }
         }
 
