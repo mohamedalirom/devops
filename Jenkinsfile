@@ -54,7 +54,15 @@ pipeline {
 
         stage('Deploy to Nexus') {
             steps {
-                sh "mvn deploy"
+                withCredentials([usernamePassword(credentialsId: 'nexus-auth',
+                                                  usernameVariable: 'NEXUS_USR',
+                                                  passwordVariable: 'NEXUS_PSW')]) {
+
+                    sh """
+                        mvn deploy \
+                        -s /var/jenkins_home/.m2/settings.xml
+                    """
+                }
             }
         }
 
