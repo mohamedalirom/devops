@@ -119,11 +119,13 @@
     <distributionManagement>
         <repository>
             <id>nexus</id>
-            <url>http://172.20.0.3:8081/repository/student-management-release/</url>
+            <url>http://nexus:8081/repository/student-management-release/</url>
         </repository>
+
         <snapshotRepository>
             <id>nexus</id>
-            <url>http://172.20.0.3:8081/repository/student-management-snapshot/</url>
+            <url>http://nexus:8081/repository/student-management-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
+
 </project>
