@@ -123,7 +123,7 @@
         </repository>
         <snapshotRepository>
             <id>nexus</id>
-            <url>http://192.168.214.128:8081/repository/student-management-snapshots/</url>
+            <url>http://192.168.214.128:8081/repository/student-management-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
 </project>
