@@ -16,7 +16,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'mohamedali-romdhane',
-                    url: 'https://github.com/<user>/student-management.git'
+                    url: 'https://github.com/mohamedalirom/devops.git'
             }
         }
 
