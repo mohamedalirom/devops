@@ -8,7 +8,6 @@ pipeline {
 
     environment {
         SONAR_TOKEN = credentials('sonar-token')
-        NEXUS = credentials('nexus-auth')
     }
 
     stages {
@@ -46,25 +45,17 @@ pipeline {
 
         stage('Quality Gate') {
             steps {
-                timeout(time: 5, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
+                script {
+                    def qg = waitForQualityGate()
+                    if (qg.status != 'OK') {
+                        error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                    }
                 }
             }
         }
 
-        stage('Deploy to Nexus') {
-            steps {
-                withCredentials([usernamePassword(credentialsId: 'nexus-auth',
-                                                  usernameVariable: 'NEXUS_USR',
-                                                  passwordVariable: 'NEXUS_PSW')]) {
 
-                    sh """
-                        mvn deploy \
-                        -s /var/jenkins_home/.m2/settings.xml
-                    """
-                }
-            }
-        }
+
 
         stage('Docker Build') {
             steps {
