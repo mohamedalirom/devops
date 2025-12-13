@@ -3,12 +3,11 @@ pipeline {
 
     tools {
         jdk 'JAVA_HOME'
-         maven 'M2_HOME'
-
+        maven 'M2_HOME'
     }
 
     environment {
-        SONAR_TOKEN= credentials('sonar-token')
+        SONAR_TOKEN = credentials('sonar-token')
         DOCKER_IMAGE = "mohamedaliromdhane/student-management"
     }
 
@@ -23,7 +22,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'mvn clean compile'
+                sh 'mvn clean package -DskipTests'
             }
         }
 
@@ -35,16 +34,16 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQubeServer') {
-                    sh '''
+                withSonarQubeEnv('SonarQube') {
+                    sh """
                         mvn sonar:sonar \
                         -Dsonar.projectKey=student-management \
-                        -Dsonar.host.url=http://localhost:9000
-                    '''
+                        -Dsonar.host.url=http://192.168.32.130:9000 \
+                        -Dsonar.login=$SONAR_TOKEN
+                    """
                 }
             }
         }
-
 
         stage('Quality Gate') {
             steps {
@@ -56,6 +55,7 @@ pipeline {
 
         stage('Docker Build') {
             steps {
+                sh 'ls -l target'
                 sh 'docker build -t $DOCKER_IMAGE:latest .'
             }
         }
@@ -68,8 +68,8 @@ pipeline {
                     passwordVariable: 'DOCKER_PASS'
                 )]) {
                     sh '''
-                    echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
-                    docker push $DOCKER_IMAGE:latest
+                        echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
+                        docker push $DOCKER_IMAGE:latest
                     '''
                 }
             }
