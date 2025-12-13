@@ -39,7 +39,7 @@ pipeline {
                     sh '''
                         mvn sonar:sonar \
                         -Dsonar.projectKey=student-management \
-                        -Dsonar.host.url=http://sonarqube:9000
+                        -Dsonar.host.url=http://localhost:9000
                     '''
                 }
             }
