@@ -8,6 +8,8 @@ pipeline {
 
     environment {
         SONAR_TOKEN = credentials('sonar-token')
+        DOCKER_IMAGE = "yusff08/student-management"
+        DOCKER_TAG   = "1.0.${BUILD_NUMBER}"
     }
 
     stages {
@@ -53,11 +55,30 @@ pipeline {
 
 
 
-        stage('Docker Build') {
-            steps {
-                sh "docker build -t student-management:latest ."
-            }
-        }
+                stage('Docker Build') {
+                    steps {
+                        sh """
+                        docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
+                        docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest
+                        """
+                    }
+                }
+
+                stage('Docker Push') {
+                    steps {
+                        withCredentials([usernamePassword(
+                            credentialsId: 'dockerhub-creds',
+                            usernameVariable: 'DOCKER_USER',
+                            passwordVariable: 'DOCKER_PASS'
+                        )]) {
+                            sh """
+                            echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
+                            docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
+                            docker push ${DOCKER_IMAGE}:latest
+                            """
+                        }
+                    }
+                }
 
 
     }
