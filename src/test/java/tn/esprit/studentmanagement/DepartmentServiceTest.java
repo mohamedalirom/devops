@@ -1,81 +1,70 @@
-pipeline {
-    agent any
+package tn.esprit.studentmanagement;
 
-    tools {
-        jdk 'jdk21'
-        maven 'maven3'
+import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import tn.esprit.studentmanagement.entities.Department;
+import tn.esprit.studentmanagement.repositories.DepartmentRepository;
+import tn.esprit.studentmanagement.services.DepartmentService;
+
+import java.util.List;
+import java.util.Optional;
+
+import static org.junit.jupiter.api.Assertions.*;
+import static org.mockito.Mockito.*;
+
+@ExtendWith(MockitoExtension.class)
+class DepartmentServiceTest {
+
+    @Mock
+    DepartmentRepository departmentRepository;
+
+    @InjectMocks
+    DepartmentService departmentService;
+
+    @Test
+    void shouldReturnAllDepartments() {
+        when(departmentRepository.findAll())
+                .thenReturn(List.of(new Department(), new Department()));
+
+        List<Department> list = departmentService.getAllDepartments();
+
+        assertEquals(2, list.size());
+        verify(departmentRepository).findAll();
     }
 
-    environment {
-        SONAR_TOKEN = credentials('sonar-token')
-        DOCKER_IMAGE = "yusff08/student-management"
-        DOCKER_TAG   = "1.0.${BUILD_NUMBER}"
+    @Test
+    void shouldReturnDepartmentById() {
+        Department d = new Department();
+        d.setIdDepartment(7L);
+
+        when(departmentRepository.findById(7L)).thenReturn(Optional.of(d));
+
+        Department result = departmentService.getDepartmentById(7L);
+
+        assertNotNull(result);
+        assertEquals(7L, result.getIdDepartment());
     }
 
-    stages {
+    @Test
+    void shouldSaveDepartment() {
+        Department d = new Department();
+        d.setIdDepartment(2L);
 
-        stage('Checkout') {
-            steps {
-                git branch: 'youssefRomdhane', url: 'https://github.com/mohamedalirom/devops.git'
-            }
-        }
+        when(departmentRepository.save(d)).thenReturn(d);
 
-        stage('Build') {
-            steps {
-                sh "mvn clean install -DskipTests=false"
-            }
-        }
+        Department result = departmentService.saveDepartment(d);
 
-        stage('Test') {
-            steps {
-                sh "mvn test"
-            }
-        }
+        assertEquals(2L, result.getIdDepartment());
+        verify(departmentRepository).save(d);
+    }
 
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('SonarQubeServer') {
-                    sh """
-                        mvn sonar:sonar \
-                          -Dsonar.projectKey=student-management \
-                          -Dsonar.host.url=http://sonarqube:9000 \
-                          -Dsonar.login=$SONAR_TOKEN
-                    """
-                }
-            }
-        }
+    @Test
+    void shouldDeleteDepartment() {
+        departmentService.deleteDepartment(9L);
 
-        stage('Quality Gate') {
-            steps {
-                timeout(time: 5, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
-
-        stage('Docker Build') {
-            steps {
-                sh """
-                docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
-                docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest
-                """
-            }
-        }
-
-        stage('Docker Push') {
-            steps {
-                withCredentials([usernamePassword(
-                        credentialsId: 'dockerhub-creds',
-                        usernameVariable: 'DOCKER_USER',
-                        passwordVariable: 'DOCKER_PASS'
-                )]) {
-                    sh """
-                    echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-                    docker push ${DOCKER_IMAGE}:${DOCKER_TAG}
-                    docker push ${DOCKER_IMAGE}:latest
-                    """
-                }
-            }
-        }
+        verify(departmentRepository).deleteById(9L);
     }
 }
