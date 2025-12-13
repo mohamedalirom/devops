@@ -8,7 +8,7 @@ pipeline {
     }
 
     environment {
-        SONAR_PROJECT_KEY = "student-management"
+        SONAR_TOKEN= credentials('sonar-token')
         DOCKER_IMAGE = "mohamedaliromdhane/student-management"
     }
 
@@ -39,8 +39,10 @@ pipeline {
                     sh '''
                     mvn sonar:sonar \
                     -Dsonar.projectKey=student-management \
-                    -Dsonar.host.url=http://localhost:9000
+                    -Dsonar.host.url=http://localhost:9000\
+                    -Dsonar.login=$SONAR_TOKEN
                     '''
+
                 }
             }
         }
