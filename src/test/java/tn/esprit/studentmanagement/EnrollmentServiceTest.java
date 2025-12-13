@@ -16,7 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
 
 @ExtendWith(MockitoExtension.class)
-class EnrollmentServiceTest extends AbstractTest {
+class EnrollmentServiceTest {
 
     @Mock
     EnrollmentRepository enrollmentRepository;
