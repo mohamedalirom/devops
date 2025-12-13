@@ -35,17 +35,16 @@ pipeline {
 
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('SonarQube') {
+                withSonarQubeEnv('SonarQubeServer') {
                     sh '''
-                    mvn sonar:sonar \
-                    -Dsonar.projectKey=student-management \
-                    -Dsonar.host.url=http://localhost:9000\
-                    -Dsonar.login=$SONAR_TOKEN
+                        mvn sonar:sonar \
+                        -Dsonar.projectKey=student-management \
+                        -Dsonar.host.url=http://sonarqube:9000
                     '''
-
                 }
             }
         }
+
 
         stage('Quality Gate') {
             steps {
