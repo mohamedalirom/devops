@@ -8,7 +8,7 @@ pipeline {
 
     environment {
         SONAR_TOKEN = credentials('sonar-token')
-        DOCKER_IMAGE = "yusff08/student-management"
+        DOCKER_IMAGE = "yusfff08/student-management"
         DOCKER_TAG   = "1.0.${BUILD_NUMBER}"
     }
 
