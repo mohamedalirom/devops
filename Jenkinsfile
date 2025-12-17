@@ -3,13 +3,12 @@ pipeline {
 
     tools {
         jdk 'JAVA_HOME'
-         maven 'M2_HOME'
-
+        maven 'M2_HOME'
     }
 
     environment {
-        SONAR_TOKEN= credentials('sonar-token')
-        DOCKER_IMAGE = "mohamedaliromdhane/student-management"
+        SONAR_TOKEN = credentials('sonar-token')
+        DOCKER_IMAGE = "dalirom123/student-management"
     }
 
     stages {
@@ -26,7 +25,6 @@ pipeline {
                 sh 'mvn clean package -DskipTests=true'
             }
         }
-
 
         stage('Test') {
             steps {
@@ -45,7 +43,6 @@ pipeline {
                 }
             }
         }
-
 
         stage('Quality Gate') {
             steps {
@@ -71,14 +68,10 @@ pipeline {
                     sh '''
                         echo "Logging to Docker Hub as $DOCKER_USER"
                         echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
-
-                        docker tag mohamedaliromdhane/student-management:latest dalirom123/student-management:latest
-                        docker push dalirom123/student-management:latest
+                        docker push $DOCKER_IMAGE:latest
                     '''
                 }
             }
         }
-
-
     }
 }
