@@ -72,12 +72,13 @@ pipeline {
                         echo "Logging to Docker Hub as $DOCKER_USER"
                         echo "$DOCKER_PASS" | docker login -u "$DOCKER_USER" --password-stdin
 
-                        docker tag student-management:latest dalirom123/student-management:latest
+                        docker tag mohamedaliromdhane/student-management:latest dalirom123/student-management:latest
                         docker push dalirom123/student-management:latest
                     '''
                 }
             }
         }
+
 
     }
 }
