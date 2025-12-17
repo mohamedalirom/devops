@@ -16,6 +16,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
+                deleteDir()
                 git branch: 'youssefRomdhane', url: 'https://github.com/mohamedalirom/devops.git'
             }
         }
