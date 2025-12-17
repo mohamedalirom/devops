@@ -73,5 +73,12 @@ pipeline {
                 }
             }
         }
+        stage('K8s Test') {
+            steps {
+                withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
+                    sh 'kubectl get nodes'
+                }
+            }
+        }
     }
 }

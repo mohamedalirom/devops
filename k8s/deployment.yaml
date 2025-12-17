@@ -14,24 +14,35 @@ spec:
     spec:
       containers:
         - name: student-management
-          image: dalirom123/student-management:latest
-          imagePullPolicy: Always
+          image: student-management:latest
+          imagePullPolicy: IfNotPresent
 
           ports:
             - containerPort: 8089   # ✅ PORT CORRECT
 
           env:
-            - name: JAVA_OPTS
-              value: "-Xms256m -Xmx512m"
-
-            # ✅ DÉSACTIVE COMPLÈTEMENT MYSQL / JPA
-            - name: SPRING_AUTOCONFIGURE_EXCLUDE
-              value: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+            - name: SPRING_DATASOURCE_URL
+              value: jdbc:mysql://mysql:3306/studentdb?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+            - name: SPRING_DATASOURCE_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_USER
+            - name: SPRING_DATASOURCE_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: mysql-secret
+                  key: MYSQL_PASSWORD
+            - name: SPRING_JPA_HIBERNATE_DDL_AUTO
+              value: update
+            - name: SPRING_JPA_DATABASE_PLATFORM
+              value: org.hibernate.dialect.MySQL8Dialect
 
           resources:
             requests:
+              memory: "256Mi"
+              cpu: "250m"
+            limits:
               memory: "512Mi"
               cpu: "500m"
-            limits:
-              memory: "1Gi"
-              cpu: "1"
+
